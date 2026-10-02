@@ -4,7 +4,7 @@ This fork adds a locally tested macOS Safari port of [IsThereAnyDeal/AugmentedSt
 
 See [Safari build, installation, and compatibility notes](SAFARI-TESTING.md) to build it yourself. Tested areas include store pricing, regional pricing, SteamPeek, search, wishlist, and display-only community/inventory/market browsing. Local ad-hoc builds require Safari's **Allow unsigned extensions** setting, which may reset after restarting Safari. Full compatibility and transactional features are not verified.
 
-Report Safari-port issues to [this fork's issue tracker](https://github.com/thejudge22/AugmentedSteam/issues), rather than asking upstream to support this experimental port.
+The public fork is [AugmentedSteam-Safari](https://github.com/thejudge22/AugmentedSteam-Safari). Report Safari-port issues to [this fork's issue tracker](https://github.com/thejudge22/AugmentedSteam-Safari/issues), rather than asking upstream to support this experimental port.
 
 [![Banner](.github/banner.png)](https://augmentedsteam.com/)
 
