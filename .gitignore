@@ -6,3 +6,12 @@
 
 # API keys
 scripts/tools/locale/.keys.mjs
+
+# Local Safari packaging and test artifacts
+.DS_Store
+/.derived-data*/
+/safari-xcode/
+/safari-rebuilt/
+/.safari-install-backup.app/
+/safari-rebuild.log
+/Screenshot*.png

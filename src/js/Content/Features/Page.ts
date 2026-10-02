@@ -54,11 +54,15 @@ export default abstract class Page {
     protected abstract getUser(factory: UserFactory): Promise<UserInterface>;
 
     async run(): Promise<void> {
-        if (document.querySelector("#as-menu")) {
+        if (document.querySelector("#as-menu") || document.documentElement.hasAttribute("data-as-initialized")) {
             // already loaded
             return;
         }
         if (!this.check()) { return; }
+
+        // Claim the document before awaiting: Safari can evaluate multiple copies concurrently.
+        // A DOM marker is shared even when those copies use separate script globals.
+        document.documentElement.setAttribute("data-as-initialized", "true");
 
         let language: Language|null;
         let user: UserInterface;
@@ -90,6 +94,7 @@ export default abstract class Page {
             console.error("Failed to initialize Augmented Steam");
             console.error(err);
             console.groupEnd();
+            document.documentElement.removeAttribute("data-as-initialized");
             return;
         }
 
