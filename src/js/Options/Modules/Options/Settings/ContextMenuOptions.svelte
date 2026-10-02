@@ -4,7 +4,6 @@
     import type {Writable} from "svelte/store";
     import type {SettingsSchema} from "../../../Data/_types";
     import {
-        __options_contextBartervg,
         __options_contextItad, __options_contextProtondb,
         __options_contextSteamdb,
         __options_contextSteamdbInstant,
@@ -43,11 +42,6 @@
 <Toggle value={$settings.context_itad}
         on:toggle={async (e) => handleChange("context_itad", e.detail)}>
     {L(__options_contextItad, {query: "..."})}
-</Toggle>
-
-<Toggle value={$settings.context_bartervg}
-        on:toggle={async (e) => handleChange("context_bartervg", e.detail)}>
-    {L(__options_contextBartervg, {query: "..."})}
 </Toggle>
 
 <Toggle value={$settings.context_steamdb}
